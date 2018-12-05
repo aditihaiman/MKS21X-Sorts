@@ -11,8 +11,6 @@ public class selectionSort {
     System.out.println("[5, 1, 12, -5, 16, 2, 12, 14]");
     selectionSort(ary2);
 
-
-
   }
 
 
@@ -30,7 +28,7 @@ public class selectionSort {
       int temp = ary[i];
       ary[i] = ary[minIdx];
       ary[minIdx] = temp;
-      System.out.println(Arrays.toString(ary));
+      //System.out.println(Arrays.toString(ary));
     }
   }
 
