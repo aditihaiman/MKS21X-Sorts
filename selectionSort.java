@@ -2,26 +2,26 @@ public class selectionSort {
   public static void main(String[] args) {
     int[] ary = {1, 6, 3, 2, 7, 4};
     System.out.println("[1, 6, 3, 2, 7, 4]");
-    insertionSort(ary);
+    selectionSort(ary);
     for (int x = 0; x < ary.length; x++) {
       System.out.println(ary[x]);
     }
   }
-  public static void insertionSort(int[] ary) {
-    int tempIdx = 0;
+  public static void selectionSort(int[] ary) {
+    int minIdx;
     int x = 0;
     for (int i = 0; i < ary.length; i++) {
-      int min = ary[i];
-      for (x = i; x < ary.length; x++) {
-        if (ary[x] < min) {
-          min = ary[x];
-          tempIdx = x;
+      minIdx = i;
+      for (x = i + 1; x < ary.length; x++) {
+        if (ary[x] < ary[minIdx]) {
+          minIdx = x;
         }
       }
-      ary[tempIdx] = ary[i];
-      ary[i] = min;
+      int temp = ary[i];
+      ary[i] = ary[minIdx];
+      ary[minIdx] = temp;
     }
-  } 
+  }
 
 
 }
