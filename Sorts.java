@@ -33,10 +33,8 @@ public class Sorts {
       }
       if (swaps==0) swap = false;
     }
-
-
-
   }
+
 
 
 }
