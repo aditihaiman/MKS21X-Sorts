@@ -11,6 +11,10 @@ public class selectionSort {
     System.out.println("[5, 1, 12, -5, 16, 2, 12, 14]");
     selectionSort(ary2);
 
+    int[] ary3 = {};
+    selectionSort(ary3);
+    System.out.println(Arrays.toString(ary3));
+
   }
 
 
