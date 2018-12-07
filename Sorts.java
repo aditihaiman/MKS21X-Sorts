@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Sorts {
 
   public static void selectionSort(int[] ary) {
@@ -18,17 +19,19 @@ public class Sorts {
 
 
   public static void bubbleSort(int[] data) {
-    int swaps = 1;
-    while (swaps > 0) {
+    boolean swap = true;
+    while (swap) {
+      int swaps = 0;
       for(int x = 0; x < data.length-1; x++) {
-        swaps = 0;
         if(data[x] > data[x+1]) {
           int temp = data[x];
           data[x] = data[x+1];
           data[x+1] = temp;
           swaps++;
         }
+        //System.out.println(Arrays.toString(data));
       }
+      if (swaps==0) swap = false;
     }
 
 
