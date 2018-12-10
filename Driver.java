@@ -1,24 +1,31 @@
 import java.util.Arrays;
-import java.lang.Math;
-public class Driver {
-  public static void main(String[] args) {
-    int[] data = {3, 5, 7, 5, 4, 2, 1, 9, 0};
-    System.out.println(Arrays.toString(data));
-    Sorts.bubbleSort(data);
-    System.out.println(Arrays.toString(data));
+public class Driver{
 
-    int[] data2 = {};
-    Sorts.bubbleSort(data2);
-    System.out.println(Arrays.toString(data2));
+  public static void main(String[]artie){
 
-
-    int[] data3 = new int[100000];
-    for(int x = 0; x < 100000; x++) {
-      data3[x] = (int)(Math.random() * 10);
+    int[] randish = new int[Integer.parseInt(artie[0])];
+    for(int i = 0 ; i < randish.length; i++){
+      randish[i] =(int)(Math.random()*10000);
     }
 
-    Sorts.selectionSort(data3);
-    //System.out.println(Arrays.toString(data3));
-
+    if(artie[1].equals("selection")){
+      Sorts.selectionSort(randish);
+    }
+    if(artie[1].equals("bubble")){
+      Sorts.bubbleSort(randish);
+    }
+    if(artie[1].equals("test")){
+      int[] randish2 = Arrays.copyOf(randish,randish.length);
+      int[] randish3 = Arrays.copyOf(randish,randish.length);
+      Sorts.selectionSort(randish);
+      Sorts.bubbleSort(randish2);
+      Arrays.sort(randish3);
+      if( Arrays.equals(randish,randish3)){
+        System.out.println("Selection Correct!");
+      }
+      if( Arrays.equals(randish2,randish3)){
+        System.out.println("Bubble Correct!");
+      }
+    }
   }
 }
