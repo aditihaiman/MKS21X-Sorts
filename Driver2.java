@@ -8,7 +8,7 @@ public class Driver2{
     System.out.println(Arrays.toString(data));
 
     int[] data2 = {};
-    Sorts.bubbleSort(data2);
+    Sorts.insertionSort(data2);
     System.out.println(Arrays.toString(data2));
 
 
@@ -17,7 +17,7 @@ public class Driver2{
       data3[x] = (int)(Math.random() * 10);
     }
 
-    Sorts.selectionSort(data3);
+    //Sorts.selectionSort(data3);
     //System.out.println(Arrays.toString(data3));
 
   }

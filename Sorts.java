@@ -46,7 +46,7 @@ public class Sorts {
               data[x] = data[y];
             }
           }
-          data[y] = temp;
+          data[y+1] = temp;
         }
       }
     }
