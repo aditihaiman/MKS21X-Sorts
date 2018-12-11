@@ -41,11 +41,10 @@ public class Sorts {
         int temp = data[x];
         if (data[x] > data[x-1]) {
           int y = x-1;
-          for (y = x - 1; y >= 0; y--) {
-            if (temp > data[y]) {
-              data[idx] = data[y];
-              idx--;
-            }
+          while (temp < data[y] && y >= 0) {
+            data[x] = data[y];
+            y--;
+            x--;
           }
           data[y+1] = temp;
         }
