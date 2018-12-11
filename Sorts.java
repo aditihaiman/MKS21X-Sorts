@@ -41,9 +41,11 @@ public class Sorts {
         if (data[x] > data[x-1]) {
           int temp = data[x];
           int y;
+          int idx = x;
           for (y = x - 1; y >= 0; y--) {
             if (temp > data[y]) {
-              data[x] = data[y];
+              data[idx] = data[y];
+              idx--;
             }
           }
           data[y+1] = temp;
