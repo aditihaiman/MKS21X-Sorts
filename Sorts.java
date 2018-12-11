@@ -39,18 +39,16 @@ public class Sorts {
     if (data.length > 0) {
       for (int x = 1; x < data.length; x++) {
         int temp = data[x];
-        if (data[x] > data[x-1]) {
-          int y = x-1;
-          while (temp < data[y] && y >= 0) {
-            data[x] = data[y];
-            y--;
-            x--;
-          }
-          data[y+1] = temp;
+        int y = x-1;
+        int sub = 0;
+        while (temp < data[y] && y >= 0) {
+          data[x-sub] = data[y];
+          y--;
+          sub++;
         }
+        data[y] = temp;
       }
     }
-
   }
 
 
