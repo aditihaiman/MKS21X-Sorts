@@ -41,12 +41,12 @@ public class Sorts {
         int temp = data[x];
         int y = x-1;
         int sub = 0;
-        while (temp < data[y] && y >= 0) {
+        while (y >= 0 && temp < data[y]) {
           data[x-sub] = data[y];
           y--;
           sub++;
         }
-        data[y] = temp;
+        data[y+1] = temp;
       }
     }
   }
